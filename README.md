@@ -4,7 +4,7 @@ Cloud&Cloud made Terraform Module for AWS Provider
 --
 ```
 module "ec2-instance" {
-  source      = "magicorntech/ec2-instance/aws"
+  source      = "yonetimacademy/ec2-instance/aws"
   version     = "0.0.1"
   tenant      = var.tenant
   name        = var.name
@@ -71,5 +71,5 @@ module "ec2-instance" {
 ```
 
 ## Notes
-1) Works better with magicorn-aws-kms module.
-2) EC2 Key Pairs are set through magicorn-aws-kms module.
+1) Works better with yonetimacademy-aws-kms module.
+2) EC2 Key Pairs are set through yonetimacademy-aws-kms module.
