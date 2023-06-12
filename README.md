@@ -72,4 +72,4 @@ module "ec2-instance" {
 
 ## Notes
 1) Works better with yonetimacademy-aws-kms module.
-2) EC2 Key Pairs are set through yonetimacademy-aws-kms module.
+2) EC2 Key Pairs are set through yonetimacademy-aws-kms module..
