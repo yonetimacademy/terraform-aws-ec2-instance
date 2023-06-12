@@ -1,6 +1,6 @@
 # terraform-aws-ec2-instance
 
-Magicorn made Terraform Module for AWS Provider
+Cloud&Cloud made Terraform Module for AWS Provider
 --
 ```
 module "ec2-instance" {

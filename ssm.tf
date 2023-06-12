@@ -1,6 +1,6 @@
 resource "aws_ssm_parameter" "main_instance_id" {
   name        = "/${var.tenant}/${var.name}/${var.environment}/ec2/${var.ec2_name}/id"
-  description = "Managed by Magicorn"
+  description = "Managed by yonetimacademy"
   type        = "SecureString"
   value       = aws_instance.main.id
 
@@ -9,7 +9,7 @@ resource "aws_ssm_parameter" "main_instance_id" {
     Tenant      = var.tenant
     Project     = var.name
     Environment = var.environment
-    Maintainer  = "Magicorn"
+    Maintainer  = "yonetimacademy"
     Terraform   = "yes"
   }
 }
