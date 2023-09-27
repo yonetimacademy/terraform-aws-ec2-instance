@@ -5,7 +5,7 @@ resource "aws_eip" "main" {
   vpc        = true
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false # testden sonra true yap
   }
 
   tags = {

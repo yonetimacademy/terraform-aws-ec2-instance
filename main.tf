@@ -8,9 +8,9 @@ resource "aws_instance" "main" {
   disable_api_stop            = var.stop_protection
   disable_api_termination     = var.termination_protection
   source_dest_check           = var.source_dest_check
-  iam_instance_profile        = var.instance_profile
+  iam_instance_profile        = length(var.instance_profile) == 0 ? null : aws_iam_instance_profile.main.name
   key_name                    = var.key_name
-  user_data                   = (var.user_data) ? var.user_data : null
+  user_data                   = (var.user_data) != null ? var.user_data : null
   tenancy                     = "default"
 
   credit_specification {
@@ -68,4 +68,9 @@ resource "aws_instance" "main" {
     Maintainer  = "yonetimacademy"
     Terraform   = "yes"
   }
+}
+
+resource "aws_iam_instance_profile" "main" {
+  name = "${var.tenant}-${var.name}-ec2-${var.ec2_name}-${var.environment}"
+  role =  aws_iam_role.main.name
 }
